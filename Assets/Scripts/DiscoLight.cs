@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class DiscoLight : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public Light discoLight;
+    public Color discoLightColor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        discoLight.color = Color.magenta;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.deltaTime);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        discoLight.color = discoLightColor;
     }
 }
